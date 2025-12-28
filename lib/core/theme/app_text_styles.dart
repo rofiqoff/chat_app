@@ -80,7 +80,7 @@ class AppTextStyles {
   static const TextStyle appBarTitle = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w600,
-    color: AppColors.surface,
+    color: AppColors.textPrimary,
     fontFamily: fontFamily,
   );
 }

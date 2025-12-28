@@ -17,11 +17,13 @@ class AppTheme {
 
       // Appar theme
       appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.primary,
-          foregroundColor: AppColors.surface,
-          elevation: 0,
-          centerTitle: false,
-          titleTextStyle: AppTextStyles.appBarTitle),
+        backgroundColor: AppColors.primary,
+        foregroundColor: AppColors.surface,
+        elevation: 0,
+        titleSpacing: 4,
+        centerTitle: false,
+        titleTextStyle: AppTextStyles.appBarTitle,
+      ),
 
       // Text theme
       textTheme: const TextTheme(

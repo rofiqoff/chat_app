@@ -13,7 +13,8 @@ class AppStrings {
   static const String enterPhoneNumber = 'Enter your phone number';
   static const String verificationCodeSent =
       'We will send you a verification code';
+  static const String phoneNumberHint = '812 3456 7890';
   static const String next = 'Next';
-
-  // You can add more strings as you build features
+  static const String phoneNumberRequired = 'Phone number is required';
+  static const String phoneNumberInvalid = 'Please enter a valid phone number';
 }

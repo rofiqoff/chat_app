@@ -2,6 +2,7 @@ import 'package:chat_app/core/constants/app_constants.dart';
 import 'package:chat_app/core/constants/app_strings.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/core/theme/app_text_styles.dart';
+import 'package:chat_app/features/authentication/presentation/screens/phone_auth_screen.dart';
 import 'package:chat_app/shared/atoms/app_button.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -54,9 +55,12 @@ class OnboardingScreen extends StatelessWidget {
               AppButton(
                 label: AppStrings.getStarted,
                 onPressed: () {
-                  if (kDebugMode) {
-                    print('Get Started clicked!');
-                  }
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            const PhoneAuthScreen(isLogin: false)),
+                  );
                 },
               ),
 
@@ -66,7 +70,12 @@ class OnboardingScreen extends StatelessWidget {
               AppButton(
                 label: AppStrings.alreadyHaveAccount,
                 onPressed: () {
-                  print('Login clicked!');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            const PhoneAuthScreen(isLogin: true)),
+                  );
                 },
                 isOutlined: true,
               ),
