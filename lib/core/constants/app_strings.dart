@@ -17,4 +17,13 @@ class AppStrings {
   static const String next = 'Next';
   static const String phoneNumberRequired = 'Phone number is required';
   static const String phoneNumberInvalid = 'Please enter a valid phone number';
+
+  // OTP
+  static const String verifyOtp = 'Verify OTP';
+  static const String enterVerificationCode = 'Enter verification code';
+  static String codeSentTo(String phone) => 'Code sent to $phone';
+  static String resendCodeIn(int seconds) => 'Resend code in $seconds seconds';
+  static const String resendCode = 'Resend code';
+  static const String verify = 'Verify';
+  static const String verifying = 'Verifying...';
 }

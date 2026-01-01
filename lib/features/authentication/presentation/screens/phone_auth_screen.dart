@@ -2,8 +2,10 @@ import 'package:chat_app/core/constants/app_constants.dart';
 import 'package:chat_app/core/constants/app_strings.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/core/theme/app_text_styles.dart';
+import 'package:chat_app/features/authentication/presentation/screens/otp_screen.dart';
 import 'package:chat_app/shared/atoms/app_button.dart';
 import 'package:chat_app/shared/atoms/app_text_field.dart';
+import 'package:chat_app/shared/pages/screen_container.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -25,7 +27,7 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   // State variables
-  String _countryCode = '+62';
+  final String _countryCode = '+62';
   bool _isLoading = false;
 
   @override
@@ -68,25 +70,21 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
           print('Phone number: $fullPhoneNumber');
         }
 
-        // TODO: Navigate to OTP screen
-        // We'll implement this in the next step
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => OtpScreen(phoneNumber: fullPhoneNumber)),
+        );
       });
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.surface,
-      appBar: AppBar(
-        title: Text(widget.isLogin ? AppStrings.login : AppStrings.register),
-        backgroundColor: AppColors.surface,
-        foregroundColor: AppColors.textPrimary,
-        elevation: 0,
-      ),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(AppConstants.spacingL),
+    return ScreenContainer(
+      title: widget.isLogin ? AppStrings.login : AppStrings.register,
+      child: Padding(
+        padding: const EdgeInsets.all(AppConstants.spacingL),
           child: Form(
             key: _formKey,
             child: Column(
@@ -150,8 +148,7 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 
   /// Builds country code selector
