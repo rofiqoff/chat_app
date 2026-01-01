@@ -21,7 +21,7 @@ class OtpScreen extends StatefulWidget {
   State<OtpScreen> createState() => _OtpScreenState();
 }
 
-const int _otpLength = 6;
+const int _otpLength = 4;
 
 class _OtpScreenState extends State<OtpScreen> {
   int _countdown = 60;
@@ -81,7 +81,7 @@ class _OtpScreenState extends State<OtpScreen> {
   /// Handle OTP input changes
   void _handleOtpChange(int index, String value) {
     if (value.isNotEmpty) {
-      if (index < 5) {
+      if (index < _otpLength - 1) {
         _focusNodes[index + 1].requestFocus();
       } else {
         _focusNodes[index].requestFocus();
@@ -167,13 +167,16 @@ class _OtpScreenState extends State<OtpScreen> {
             ),
             const SizedBox(height: AppConstants.spacingXL),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
                 _otpLength,
-                (index) => OtpInputBox(
-                  controller: _controllers[index],
-                  focusNode: _focusNodes[index],
-                  onChanged: (value) => _handleOtpChange(index, value),
+                (index) => Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: AppConstants.spacingS),
+                  child: OtpInputBox(
+                    controller: _controllers[index],
+                    focusNode: _focusNodes[index],
+                    onChanged: (value) => _handleOtpChange(index, value),
+                  ),
                 ),
               ),
             ),
