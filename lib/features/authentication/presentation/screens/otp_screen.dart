@@ -3,10 +3,10 @@ import 'package:chat_app/core/constants/app_constants.dart';
 import 'package:chat_app/core/constants/app_strings.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/core/theme/app_text_styles.dart';
-import 'package:chat_app/shared/atoms/app_button.dart';
-import 'package:chat_app/shared/atoms/otp_input_box.dart';
-import 'package:chat_app/shared/molecules/snackbar.dart';
-import 'package:chat_app/shared/pages/screen_container.dart';
+import 'package:chat_app/ui/atoms/app_button.dart';
+import 'package:chat_app/ui/atoms/otp_input_box.dart';
+import 'package:chat_app/ui/molecules/snackbar.dart';
+import 'package:chat_app/ui/pages/screen_container.dart';
 import 'package:flutter/material.dart';
 
 class OtpScreen extends StatefulWidget {
@@ -171,7 +171,8 @@ class _OtpScreenState extends State<OtpScreen> {
               children: List.generate(
                 _otpLength,
                 (index) => Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: AppConstants.spacingS),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: AppConstants.spacingS),
                   child: OtpInputBox(
                     controller: _controllers[index],
                     focusNode: _focusNodes[index],

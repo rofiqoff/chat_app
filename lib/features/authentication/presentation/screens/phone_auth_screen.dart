@@ -3,12 +3,13 @@ import 'package:chat_app/core/constants/app_strings.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/core/theme/app_text_styles.dart';
 import 'package:chat_app/features/authentication/presentation/screens/otp_screen.dart';
-import 'package:chat_app/shared/atoms/app_button.dart';
-import 'package:chat_app/shared/atoms/app_text_field.dart';
-import 'package:chat_app/shared/pages/screen_container.dart';
+import 'package:chat_app/ui/atoms/app_button.dart';
+import 'package:chat_app/ui/atoms/app_text_field.dart';
+import 'package:chat_app/ui/pages/screen_container.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../../../../courier/courier.dart';
 
 class PhoneAuthScreen extends StatefulWidget {
   final bool isLogin;
@@ -70,10 +71,9 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
           print('Phone number: $fullPhoneNumber');
         }
 
-        Navigator.push(
+        Courier.sendTo(
           context,
-          MaterialPageRoute(
-              builder: (context) => OtpScreen(phoneNumber: fullPhoneNumber)),
+          OtpScreen(phoneNumber: fullPhoneNumber),
         );
       });
     }
@@ -85,70 +85,69 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
       title: widget.isLogin ? AppStrings.login : AppStrings.register,
       child: Padding(
         padding: const EdgeInsets.all(AppConstants.spacingL),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: AppConstants.spacingL),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: AppConstants.spacingL),
 
-                // Title
-                const Text(
-                  AppStrings.enterPhoneNumber,
-                  style: AppTextStyles.heading2,
+              // Title
+              const Text(
+                AppStrings.enterPhoneNumber,
+                style: AppTextStyles.heading2,
+              ),
+
+              const SizedBox(height: AppConstants.spacingL),
+
+              Text(
+                AppStrings.verificationCodeSent,
+                style: AppTextStyles.bodyMedium.copyWith(
+                  color: AppColors.textSecondary,
                 ),
+              ),
 
-                const SizedBox(height: AppConstants.spacingL),
+              const SizedBox(height: AppConstants.spacingXL),
 
-                Text(
-                  AppStrings.verificationCodeSent,
-                  style: AppTextStyles.bodyMedium.copyWith(
-                    color: AppColors.textSecondary,
-                  ),
-                ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Country Code Selector
+                  _buildCountryCodeSelector(),
 
-                const SizedBox(height: AppConstants.spacingXL),
+                  const SizedBox(width: AppConstants.spacingM),
 
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Country Code Selector
-                    _buildCountryCodeSelector(),
-
-                    const SizedBox(width: AppConstants.spacingM),
-
-                    // Phone Number Input
-                    Expanded(
-                      child: AppTextField(
-                        controller: _phoneController,
-                        hintText: AppStrings.phoneNumberHint,
-                        keyboardType: TextInputType.phone,
-                        validator: _validatePhoneNumber,
-                        inputFormatters: [
-                          FilteringTextInputFormatter
-                              .digitsOnly, // Only numbers
-                          LengthLimitingTextInputFormatter(13), // Max 13 digits
-                        ],
-                      ),
+                  // Phone Number Input
+                  Expanded(
+                    child: AppTextField(
+                      controller: _phoneController,
+                      hintText: AppStrings.phoneNumberHint,
+                      keyboardType: TextInputType.phone,
+                      validator: _validatePhoneNumber,
+                      inputFormatters: [
+                        FilteringTextInputFormatter.digitsOnly, // Only numbers
+                        LengthLimitingTextInputFormatter(13), // Max 13 digits
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
+              ),
 
-                const Spacer(),
+              const Spacer(),
 
-                // Next Button
-                AppButton(
-                  label: AppStrings.next,
-                  onPressed: _handleNext,
-                  isLoading: _isLoading,
-                ),
+              // Next Button
+              AppButton(
+                label: AppStrings.next,
+                onPressed: _handleNext,
+                isLoading: _isLoading,
+              ),
 
-                const SizedBox(height: AppConstants.spacingL),
-              ],
-            ),
+              const SizedBox(height: AppConstants.spacingL),
+            ],
           ),
         ),
-      );
+      ),
+    );
   }
 
   /// Builds country code selector

@@ -3,8 +3,9 @@ import 'package:chat_app/core/constants/app_strings.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/core/theme/app_text_styles.dart';
 import 'package:chat_app/features/authentication/presentation/screens/phone_auth_screen.dart';
-import 'package:chat_app/shared/atoms/app_button.dart';
-import 'package:chat_app/shared/pages/screen_container.dart';
+import 'package:chat_app/courier/courier.dart';
+import 'package:chat_app/ui/atoms/app_button.dart';
+import 'package:chat_app/ui/pages/screen_container.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -53,12 +54,7 @@ class OnboardingScreen extends StatelessWidget {
             AppButton(
               label: AppStrings.getStarted,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          const PhoneAuthScreen(isLogin: false)),
-                );
+                Courier.sendTo(context, const PhoneAuthScreen(isLogin: false));
               },
             ),
 
@@ -68,12 +64,7 @@ class OnboardingScreen extends StatelessWidget {
             AppButton(
               label: AppStrings.alreadyHaveAccount,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          const PhoneAuthScreen(isLogin: true)),
-                );
+                Courier.sendTo(context, const PhoneAuthScreen(isLogin: true));
               },
               isOutlined: true,
             ),
