@@ -14,7 +14,8 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenContainer(
-      child: Padding(
+      showLeadingIcon: false,
+      body: Padding(
         padding: const EdgeInsets.all(AppConstants.spacingL),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -54,7 +55,13 @@ class OnboardingScreen extends StatelessWidget {
             AppButton(
               label: AppStrings.getStarted,
               onPressed: () {
-                Courier.sendTo(context, const PhoneAuthScreen(isLogin: false));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          const PhoneAuthScreen(isLogin: false)),
+                );
+                // Courier.sendTo(context, const PhoneAuthScreen(isLogin: false));
               },
             ),
 

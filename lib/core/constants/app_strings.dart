@@ -26,4 +26,15 @@ class AppStrings {
   static const String resendCode = 'Resend code';
   static const String verify = 'Verify';
   static const String verifying = 'Verifying...';
+
+  // Dashboard
+  static const String appName = 'ChatApp';
+  static const String chats = 'Chats';
+  static const String calls = 'Calls';
+  static const String nearby = 'Nearby';
+  static const String profile = 'Profile';
+  static const String settings = 'Settings';
+  static const String logout = 'Logout';
+  static const String yourName = 'Your Name';
+  static const String yourPhone = '+62 812 3456 7890';
 }

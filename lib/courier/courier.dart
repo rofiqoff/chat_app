@@ -8,6 +8,14 @@ class Courier {
     );
   }
 
+  static void sendAndRemoveAll(BuildContext context, Widget screen) {
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => screen),
+      (route) => false,
+    );
+  }
+
   static void back(BuildContext context) {
     Navigator.pop(context);
   }

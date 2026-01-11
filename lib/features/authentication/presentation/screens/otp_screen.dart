@@ -3,6 +3,8 @@ import 'package:chat_app/core/constants/app_constants.dart';
 import 'package:chat_app/core/constants/app_strings.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/core/theme/app_text_styles.dart';
+import 'package:chat_app/courier/courier.dart';
+import 'package:chat_app/features/dashboard/presentation/screens/dashboard_screen.dart';
 import 'package:chat_app/ui/atoms/app_button.dart';
 import 'package:chat_app/ui/atoms/otp_input_box.dart';
 import 'package:chat_app/ui/molecules/snackbar.dart';
@@ -124,6 +126,8 @@ class _OtpScreenState extends State<OtpScreen> {
 
       // Simulate successful verification
       showMessageSuccess(context, 'OTP verified successfully!');
+
+      Courier.sendAndRemoveAll(context, const DashboardScreen());
     });
   }
 
@@ -148,7 +152,7 @@ class _OtpScreenState extends State<OtpScreen> {
   Widget build(BuildContext context) {
     return ScreenContainer(
       title: AppStrings.enterVerificationCode,
-      child: Padding(
+      body: Padding(
         padding: const EdgeInsets.all(AppConstants.spacingL),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

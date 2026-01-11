@@ -83,7 +83,7 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
   Widget build(BuildContext context) {
     return ScreenContainer(
       title: widget.isLogin ? AppStrings.login : AppStrings.register,
-      child: Padding(
+      body: Padding(
         padding: const EdgeInsets.all(AppConstants.spacingL),
         child: Form(
           key: _formKey,
