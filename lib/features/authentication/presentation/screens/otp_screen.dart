@@ -122,8 +122,6 @@ class _OtpScreenState extends State<OtpScreen> {
         _isLoading = false;
       });
 
-      print('OTP verified: $otpCode');
-
       // Simulate successful verification
       showMessageSuccess(context, 'OTP verified successfully!');
 

@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1",
+        "name": "Alice Johnson",
+        "phone": "+62 812 1111 1111",
+        "distance": 50.0,
+        "status": "Available",
+        "avatarUrl": "https://i.pravatar.cc/150?u=12"
+    },
+    {
+        "id": "2",
+        "name": "Bob Wilson",
+        "phone": "+62 812 2222 2222",
+        "distance": 120.0,
+        "status": "At work",
+        "avatarUrl": "https://i.pravatar.cc/150?u=13"
+    },
+    {
+        "id": "3",
+        "name": "Charlie Brown",
+        "phone": "+62 812 3333 3333",
+        "distance": 200.0,
+        "status": "Busy",
+        "avatarUrl": "https://i.pravatar.cc/150?u=14"
+    },
+    {
+        "id": "4",
+        "name": "Diana Prince",
+        "phone": "+62 812 4444 4444",
+        "distance": 350.0,
+        "status": "Away",
+        "avatarUrl": "https://i.pravatar.cc/150?u=15"
+    },
+    {
+        "id": "5",
+        "name": "Evan Wright",
+        "phone": "+62 812 5555 5555",
+        "distance": 500.0,
+        "status": "Online",
+        "avatarUrl": "https://i.pravatar.cc/150?u=16"
+    },
+    {
+        "id": "6",
+        "name": "Fiona Gallagher",
+        "phone": "+62 812 6666 6666",
+        "distance": 750.0,
+        "status": "Offline",
+        "avatarUrl": "https://i.pravatar.cc/150?u=17"
+    },
+    {
+        "id": "7",
+        "name": "George Martin",
+        "phone": "+62 812 7777 7777",
+        "distance": 900.0,
+        "status": "Do not disturb",
+        "avatarUrl": "https://i.pravatar.cc/150?u=18"
+    },
+    {
+        "id": "8",
+        "name": "Hannah Lee",
+        "phone": "+62 812 8888 8888",
+        "distance": 1100.0,
+        "status": "Available",
+        "avatarUrl": "https://i.pravatar.cc/150?u=19"
+    },
+    {
+        "id": "9",
+        "name": "Ian Somerhalder",
+        "phone": "+62 812 9999 9999",
+        "distance": 1300.0,
+        "status": "At the gym",
+        "avatarUrl": "https://i.pravatar.cc/150?u=20"
+    },
+    {
+        "id": "10",
+        "name": "Jenna Fischer",
+        "phone": "+62 812 1010 1010",
+        "distance": 1500.0,
+        "status": "Working from home",
+        "avatarUrl": "https://i.pravatar.cc/150?u=21"
+    }
+]

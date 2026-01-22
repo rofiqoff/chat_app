@@ -3,7 +3,6 @@ import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 
 class OtpInputBox extends StatelessWidget {
   final TextEditingController controller;

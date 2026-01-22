@@ -1,0 +1,83 @@
+[
+    {
+        "id": "1",
+        "name": "John Doe",
+        "lastMessage": "Hey, how are you?",
+        "time": "10:30 AM",
+        "unreadCount": 2,
+        "avatarUrl": "https://i.pravatar.cc/150?u=1",
+        "isGroup": false
+    },
+    {
+        "id": "2",
+        "name": "Jane Smith",
+        "lastMessage": "See you tomorrow!",
+        "time": "9:15 AM",
+        "unreadCount": 0,
+        "avatarUrl": "https://i.pravatar.cc/150?u=2",
+        "isGroup": false
+    },
+    {
+        "id": "3",
+        "name": "Team Group",
+        "lastMessage": "Meeting at 3 PM",
+        "time": "Yesterday",
+        "unreadCount": 5,
+        "avatarUrl": "",
+        "isGroup": true
+    },
+    {
+        "id": "4",
+        "name": "Mom",
+        "lastMessage": "Call me when you're free",
+        "time": "Yesterday",
+        "unreadCount": 1,
+        "avatarUrl": "https://i.pravatar.cc/150?u=4",
+        "isGroup": false
+    },
+    {
+        "id": "5",
+        "name": "Office Group",
+        "lastMessage": "Project update needed",
+        "time": "2 days ago",
+        "unreadCount": 12,
+        "avatarUrl": "",
+        "isGroup": true
+    },
+    {
+        "id": "6",
+        "name": "Bob Wilson",
+        "lastMessage": "Call me when you're free",
+        "time": "Yesterday",
+        "unreadCount": 1,
+        "avatarUrl": "https://i.pravatar.cc/150?u=4",
+        "isGroup": false
+    },
+    {
+        "id": "7",
+        "name": "Alice Johnson",
+        "lastMessage": "Hey, how are you?",
+        "time": "10:30 AM",
+        "unreadCount": 2,
+        "avatarUrl": "https://i.pravatar.cc/150?u=1",
+        "isGroup": false
+    },
+    {
+        "id": "8",
+        "name": "Diana Prince",
+        "lastMessage": "Hey, how are you?",
+        "time": "10:30 AM",
+        "unreadCount": 2,
+        "avatarUrl": "https://i.pravatar.cc/150?u=1",
+        "isGroup": false
+    },
+    {
+        "id": "9",
+        "name": "Evan Wright",
+        "lastMessage": "Hey, how are you?",
+        "time": "10:30 AM",
+        "unreadCount": 2,
+        "avatarUrl": "https://i.pravatar.cc/150?u=1",
+        "isGroup": false
+    }
+]

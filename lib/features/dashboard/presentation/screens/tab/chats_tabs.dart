@@ -23,6 +23,8 @@ class ChatsTabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         _nearbyUsersList(nearbyUsers),
         const Divider(height: 1),
@@ -35,31 +37,29 @@ class ChatsTabs extends StatelessWidget {
 Widget _nearbyUsersList(List<User> nearbyUsers) {
   return Container(
     color: AppColors.surface,
-    padding: const EdgeInsets.all(AppConstants.spacingM),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          AppStrings.nearby,
-          style: AppTextStyles.heading4,
-        ),
-        const SizedBox(height: AppConstants.spacingM),
-        SizedBox(
-          height: 80,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: nearbyUsers.length,
-            itemBuilder: ((context, index) {
-              return NearbyUserCard(
-                  user: nearbyUsers[index],
+    child: Padding(
+      padding: const EdgeInsets.symmetric(
+        vertical: AppConstants.spacingM,
+      ),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: AppConstants.spacingL),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: nearbyUsers.map((user) {
+            return Padding(
+                padding: const EdgeInsets.only(right: AppConstants.spacingXS),
+                child: NearbyUserCard(
+                  user: user,
                   onTap: () {
-                    showMessageSuccess(context,
-                        "Nerby User tapped: ${nearbyUsers[index].name}");
-                  });
-            }),
-          ),
+                    // showMessageSuccess(
+                    //     context, "Nearby User tapped: ${user.name}");
+                  },
+                ));
+          }).toList(),
         ),
-      ],
+      ),
     ),
   );
 }
@@ -67,6 +67,7 @@ Widget _nearbyUsersList(List<User> nearbyUsers) {
 Widget _chatListItem(List<Chat> chats) {
   return Expanded(
     child: ListView.builder(
+      padding: const EdgeInsets.only(bottom: AppConstants.spacingXXXL),
       itemBuilder: (context, index) {
         return ChatListItem(
           chat: chats[index],

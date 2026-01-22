@@ -21,18 +21,18 @@ class ChatListItem extends StatelessWidget {
       onTap: onTap,
       contentPadding: const EdgeInsets.symmetric(
         horizontal: AppConstants.spacingM,
-        vertical: AppConstants.spacingS,
+        vertical: AppConstants.spacingXS,
       ),
 
       // Avatar
       leading: CircleAvatar(
-        radius: 28,
+        radius: 24,
         backgroundColor: AppColors.primary,
         child: chat.isGroup
             ? const Icon(
                 Icons.group,
                 color: AppColors.surface,
-                size: 28,
+                size: 24,
               )
             : Text(
                 chat.name[0].toUpperCase(),

@@ -1,4 +1,8 @@
+import 'dart:convert';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import '../../domain/entities/user.dart';
+import '../models/user_model.dart';
 
 class UserRepository {
   Future<List<User>> getNearbyUsers() async {
@@ -7,6 +11,13 @@ class UserRepository {
 
     // Return mock data
     // Later, this will fetch from Firebase
+    if (kDebugMode) {
+      final String jsonString =
+          await rootBundle.loadString('assets/json/mock_users.json');
+      final List<dynamic> jsonList = json.decode(jsonString);
+      return jsonList.map((e) => UserModel.fromJson(e)).toList();
+    }
+
     return [
       User(
         id: '1',

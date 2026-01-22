@@ -1,4 +1,8 @@
+import 'dart:convert';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import '../../domain/entities/chat.dart';
+import '../models/chat_model.dart';
 
 class ChatRepository {
   Future<List<Chat>> getChats() async {
@@ -7,6 +11,13 @@ class ChatRepository {
 
     // Return mock data
     // Later, this will fetch from Firebase
+    if (kDebugMode) {
+      final String jsonString =
+          await rootBundle.loadString('assets/json/mock_chats.json');
+      final List<dynamic> jsonList = json.decode(jsonString);
+      return jsonList.map((e) => ChatModel.fromJson(e)).toList();
+    }
+
     return [
       Chat(
         id: '1',
