@@ -1,7 +1,5 @@
 import 'package:chat_app/core/constants/app_constants.dart';
-import 'package:chat_app/core/constants/app_strings.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
-import 'package:chat_app/core/theme/app_text_styles.dart';
 import 'package:chat_app/features/chat/domain/entities/chat.dart';
 import 'package:chat_app/features/dashboard/presentation/widgets/nearby_user_card.dart';
 import 'package:chat_app/ui/molecules/snackbar.dart';
@@ -43,20 +41,18 @@ Widget _nearbyUsersList(List<User> nearbyUsers) {
       ),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: AppConstants.spacingL),
+        padding: const EdgeInsets.symmetric(horizontal: AppConstants.spacingM),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: nearbyUsers.map((user) {
-            return Padding(
-                padding: const EdgeInsets.only(right: AppConstants.spacingXS),
-                child: NearbyUserCard(
-                  user: user,
-                  onTap: () {
-                    // showMessageSuccess(
-                    //     context, "Nearby User tapped: ${user.name}");
-                  },
-                ));
+            return NearbyUserCard(
+              user: user,
+              onTap: () {
+                // showMessageSuccess(
+                //     context, "Nearby User tapped: ${user.name}");
+              },
+            );
           }).toList(),
         ),
       ),
