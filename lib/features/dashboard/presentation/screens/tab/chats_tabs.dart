@@ -1,10 +1,12 @@
 import 'package:chat_app/core/constants/app_constants.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
+import 'package:chat_app/courier/courier.dart';
 import 'package:chat_app/features/chat/domain/entities/chat.dart';
 import 'package:chat_app/features/dashboard/presentation/widgets/nearby_user_card.dart';
 import 'package:chat_app/ui/molecules/snackbar.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../chat/presentation/screens/chat_screen.dart';
 import '../../../../user/domain/entities/user.dart';
 import '../../widgets/chat_list_item.dart';
 
@@ -68,7 +70,7 @@ Widget _chatListItem(List<Chat> chats) {
         return ChatListItem(
           chat: chats[index],
           onTap: () {
-            showMessageSuccess(context, "Chat tapped: ${chats[index].name}");
+            Courier.sendTo(context, ChatScreen(chat: chats[index]));
           },
         );
       },

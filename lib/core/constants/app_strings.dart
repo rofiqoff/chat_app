@@ -37,4 +37,10 @@ class AppStrings {
   static const String logout = 'Logout';
   static const String yourName = 'Your Name';
   static const String yourPhone = '+62 812 3456 7890';
+
+  // Chat
+  static const String typeMessage = 'Type a message...';
+  static const String online = 'Online';
+  static const String offline = 'Offline';
+  static const String typing = 'Typing...';
 }
