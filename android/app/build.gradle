@@ -25,6 +25,16 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+def flutterMinSdk = localProperties.getProperty('flutter.minSdkVersion')
+if (flutterMinSdk == null) {
+    flutterMinSdk = '24'
+}
+
+def flutterTargetSdk = localProperties.getProperty('flutter.targetSdkVersion')
+if (flutterTargetSdk == null) {
+    flutterTargetSdk = '35'
+}
+
 android {
     namespace "com.example.chat_app"
     compileSdkVersion flutter.compileSdkVersion
@@ -48,10 +58,12 @@ android {
         applicationId "com.example.chat_app"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
+        minSdkVersion flutterMinSdk.toInteger()
+        targetSdkVersion flutterTargetSdk.toInteger()
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -67,4 +79,6 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+}
