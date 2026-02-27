@@ -1,0 +1,203 @@
+{
+  "project_info": {
+    "project_number": "916515634197",
+    "firebase_url": "https://trying-179504.firebaseio.com",
+    "project_id": "trying-179504",
+    "storage_bucket": "trying-179504.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916515634197:android:951959e59f18e51e46e21c",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916515634197-mlbler8g6n9eqli71mr9le7itsqusmla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Zccq1bggXyrUw3bhMB3EZJLVFaQDvMQ"
+        },
+        {
+          "current_key": "AIzaSyAopT_7SmKLd4xp7fOn3H6SMUB_40ZwXtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916515634197-0h3djl251faip67df0c7t4m0er23iv2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916515634197:android:5920de3503a2d18c",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916515634197-6vqcb1j59kd5c7pr82jssgqs1ac1fug4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.quickstart.fcm",
+            "certificate_hash": "7dbdb87e70807d279229b993235b1d1db3f779b0"
+          }
+        },
+        {
+          "client_id": "916515634197-mlbler8g6n9eqli71mr9le7itsqusmla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Zccq1bggXyrUw3bhMB3EZJLVFaQDvMQ"
+        },
+        {
+          "current_key": "AIzaSyAopT_7SmKLd4xp7fOn3H6SMUB_40ZwXtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916515634197-0h3djl251faip67df0c7t4m0er23iv2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916515634197:android:6d064b5bcaa0dba1",
+        "android_client_info": {
+          "package_name": "com.quickblox.q_municate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916515634197-ss2au64hma7hiunmjv3m2hk4u32jv8i4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quickblox.q_municate",
+            "certificate_hash": "7dbdb87e70807d279229b993235b1d1db3f779b0"
+          }
+        },
+        {
+          "client_id": "916515634197-mlbler8g6n9eqli71mr9le7itsqusmla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Zccq1bggXyrUw3bhMB3EZJLVFaQDvMQ"
+        },
+        {
+          "current_key": "AIzaSyAopT_7SmKLd4xp7fOn3H6SMUB_40ZwXtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916515634197-0h3djl251faip67df0c7t4m0er23iv2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916515634197:android:07120b90e6950c62",
+        "android_client_info": {
+          "package_name": "com.tryfcm.rofiqoff.tryfcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916515634197-sgt271jhq5gevulv71dh2gtgs7ev6f1e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tryfcm.rofiqoff.tryfcm",
+            "certificate_hash": "7dbdb87e70807d279229b993235b1d1db3f779b0"
+          }
+        },
+        {
+          "client_id": "916515634197-mlbler8g6n9eqli71mr9le7itsqusmla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Zccq1bggXyrUw3bhMB3EZJLVFaQDvMQ"
+        },
+        {
+          "current_key": "AIzaSyAopT_7SmKLd4xp7fOn3H6SMUB_40ZwXtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916515634197-0h3djl251faip67df0c7t4m0er23iv2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916515634197:android:8a0e870530dbab84",
+        "android_client_info": {
+          "package_name": "tryfcm.co.id"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916515634197-o9qhfvoep63fivc9fhs9inelgjkgqb3k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tryfcm.co.id",
+            "certificate_hash": "7dbdb87e70807d279229b993235b1d1db3f779b0"
+          }
+        },
+        {
+          "client_id": "916515634197-mlbler8g6n9eqli71mr9le7itsqusmla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Zccq1bggXyrUw3bhMB3EZJLVFaQDvMQ"
+        },
+        {
+          "current_key": "AIzaSyAopT_7SmKLd4xp7fOn3H6SMUB_40ZwXtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916515634197-0h3djl251faip67df0c7t4m0er23iv2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
